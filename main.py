@@ -151,6 +151,7 @@ def isCollide(player_x, player_y, upperPipes, lowerPipes):
     #
     for pipe in upperPipes:
         pipeHeight = GAME_SPRITES['pipe'][0].get_height()
+        print(pipeHeight)
         if player_y < pipeHeight + pipe['y'] and abs(player_x - pipe['x']) < GAME_SPRITES['pipe'][0].get_width():
             GAME_SOUNDS['hit'].play()
             return True
